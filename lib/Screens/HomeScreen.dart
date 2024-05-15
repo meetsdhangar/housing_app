@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:housing_app/Screens/DetailsScreen.dart';
 import 'package:housing_app/Screens/NotificationScreen.dart';
+import 'package:housing_app/screens/morewithlogin/morewithlogin.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +14,9 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        leading: InkWell(
+            onTap: () => Get.to(() => morewithlogin()),
+            child: Icon(Icons.menu)),
         actions: [
           IconButton(
               onPressed: () {
@@ -159,11 +165,16 @@ class HomeScreen extends StatelessWidget {
                     fontSize: 16.sp,
                   ),
                 ),
-                Text(
-                  "Read more",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 17.sp,
+                InkWell(
+                  onTap: () {
+                    Get.to(() => DetailsScreen());
+                  },
+                  child: Text(
+                    "Read more",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 17.sp,
+                    ),
                   ),
                 )
               ],

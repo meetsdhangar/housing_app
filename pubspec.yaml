@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   pinput: ^4.0.0
   dropdown_button2: ^2.3.9
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
