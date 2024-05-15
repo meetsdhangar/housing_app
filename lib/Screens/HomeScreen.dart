@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:housing_app/Screens/DetailsScreen.dart';
 import 'package:housing_app/Screens/NotificationScreen.dart';
+import 'package:housing_app/Screens/PicandDescriptionScreen.dart';
+import 'package:housing_app/Screens/PropertyinformationSceern.dart';
 import 'package:housing_app/screens/morewithlogin/morewithlogin.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -167,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(() => DetailsScreen());
+                    Get.to(() => PropertyinformationSceern());
                   },
                   child: Text(
                     "Read more",
